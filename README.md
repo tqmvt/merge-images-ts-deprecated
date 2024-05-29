@@ -1,4 +1,4 @@
-# merge-images
+# merge-images-ts
 
 > Easily compose images together without messing around with canvas
 
@@ -6,24 +6,24 @@
 [![Coverage Status](https://coveralls.io/repos/github/lukechilds/merge-images/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/merge-images?branch=master)
 [![npm](https://img.shields.io/npm/dm/merge-images.svg)](https://www.npmjs.com/package/merge-images)
 [![npm](https://img.shields.io/npm/v/merge-images.svg)](https://www.npmjs.com/package/merge-images)
-[![GitHub Donate](https://badgen.net/badge/GitHub/Sponsor/D959A7?icon=github)](https://github.com/sponsors/lukechilds)
+[![GitHub Donate](https://badgen.net/badge/GitHub/Sponsor/D959A7?icon=github)](https://github.com/sponsors/tqmvt)
 [![Bitcoin Donate](https://badgen.net/badge/Bitcoin/Donate/F19537?icon=bitcoin)](https://lu.ke/tip/bitcoin)
 [![Lightning Donate](https://badgen.net/badge/Lightning/Donate/F6BC41?icon=bitcoin-lightning)](https://lu.ke/tip/lightning)
 
-Canvas can be kind of a pain to work with sometimes, especially if you just need a canvas context to do something relatively simple like merge some images together. `merge-images` abstracts away all the repetitive tasks into one simple function call.
+Canvas can be kind of a pain to work with sometimes, especially if you just need a canvas context to do something relatively simple like merge some images together. `merge-images-ts` abstracts away all the repetitive tasks into one simple function call.
 
 Images can be overlaid on top of each other and repositioned. The function returns a Promise which resolves to a base64 data URI. Supports both the browser and Node.js.
 
 ## Install
 
 ```shell
-npm install --save merge-images
+npm install --save merge-images-ts
 ```
 
 or for quick testing:
 
 ```html
-<script src="https://unpkg.com/merge-images"></script>
+<script src="https://unpkg.com/merge-images-ts"></script>
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ With the following images:
 You can do:
 
 ```js
-import mergeImages from 'merge-images';
+import mergeImages from 'merge-images-ts';
 
 mergeImages(['/body.png', '/eyes.png', '/mouth.png'])
   .then(b64 => document.querySelector('img').src = b64);
@@ -104,7 +104,7 @@ Which will look like this:
 Usage in Node.js is the same, however you'll need to also require [node-canvas](https://github.com/Automattic/node-canvas) and pass it in via the options object.
 
 ```js
-const mergeImages = require('merge-images');
+const mergeImages = require('merge-images-ts');
 const { Canvas, Image } = require('canvas');
 
 mergeImages(['./body.png', './eyes.png', './mouth.png'], {

@@ -1,5 +1,5 @@
 {
-  "name": "merge-images",
+  "name": "merge-images-ts",
   "version": "2.0.0",
   "description": "Easily compose images together without messing around with canvas",
   "main": "dist/index.umd.js",
